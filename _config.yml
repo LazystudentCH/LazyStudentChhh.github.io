@@ -1,7 +1,7 @@
 # Site settings 配置站点
-title: '菜鸡的自我救赎之路'
+title: 'Welcome to my blog'
 description: '菜鸟自闭窝'
-keywords: '学习,编程'
+keywords: 'Golang,Mysql,Redis,算法,K8S,ELK'
 url: 'https://LazystudentCH.github.io' # your host
 
 # nav 中文字符空格：&emsp;
@@ -90,8 +90,3 @@ google-ID: ''
 color: rgb(154,133,255) rgb(255,90,90) rgb(255,210,32) rgb(98,170,255)
 
 
-#首页信息
-title: your awesome title.
-page-title: Welcome.
-home-title: 希望对你有所帮助.
-description: 菜鸡的成长之路
