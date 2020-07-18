@@ -17,15 +17,15 @@ author: true
 name: 'Chhhhhhh'
 NickName: 'Chhhhhhh'
 webtitle: 'Welcome to my blog'
-bio: ''
+bio: '一只菜鸡罢了'
 about: true
-aboutyou: '一只菜鸡罢了'
-portraits: '/assets/avatar.jpeg' # your portraits image file path
+aboutyou: '一只菜鸡的成长历程'
+portraits: '/assets/avatar.jpg' # your portraits image file path
 
 # SNS
 SNS: true
 SNS-icon: #['Facebook', 'weibo', 'qq', 'github', 'Dribbble', 'Twitter', 'instagram', 'weixin', 'Codepen']
-  mail: 'miracle.hu@qq.com'
+  # mail: 'miracle.hu@qq.com'
   weixin: '' # 你的微信二维码存放的地址
   qq: '' # 你的qq二维码存放的地址 or http://wpa.qq.com/msgrd?v=3&uin='你的QQ号'&site=qq&menu=yes
   github: ''
