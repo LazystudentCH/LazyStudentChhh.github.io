@@ -54,4 +54,26 @@ cover: '../coverimages/k8s.jpg'
 >一个Service可以看作一组提供相同服务的Pod的对外访问接口
 >Service作用于哪些Pod是通过标签选择器来实现的
 
-**
+**Ingress**
+> Ingress是K8S集群里工作在OSI网络参考模型下，第7层的应用，对外暴漏接口
+> Service只能进行第四层的流量调度，表现形式是ip+port（如果没有Ingress，只能用Iptable等方法来实现）
+> Ingress可以调度不同业务域，不同URl访问路径的业务流量
+
+## 2.核心组件
+
+**配置中心 ETCD**
+
+**主控节点(master)**
+> * kube-apiserver服务
+	> 提供了管理集群的restapi接口，包括鉴权、数据校验、集群状态变更
+	> 负责其他模块之间的数据交互，承担通信枢纽功能
+	> 是资源配额的入口
+	> 提供完备的集群机制
+> * kube-controller-manager服务
+	> 控制器的管理者，由一堆控制器组成，通过apiserver监控整个集群的状态，确保集群处于预期的状态
+> * kube-scheduler服务
+	> 包含很多调度算法，主要功能是调度pod到适合的运算节点上
+
+**运算节点(node)**
+> * kube-kubelet服务
+	> 
