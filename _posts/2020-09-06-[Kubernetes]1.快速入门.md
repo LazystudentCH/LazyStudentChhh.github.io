@@ -76,4 +76,17 @@ cover: '../coverimages/k8s.jpg'
 
 **运算节点(node)**
 > * kube-kubelet服务
-	> 
+	> 简单的说，kubelet的主要功能就是从某个地方获取pod的期望状态（运行什么容器，副本数量等等）并调用容器平台（docker）的接口达到这个状态
+	> 定时汇报当前节点状态给apiserver，以供调度的时候使用
+	> 镜像和容器的清理工作，保证节点上的镜像不会占满磁盘，退出的容器不会占用太多资源
+> * kube-proxy
+	> 是K8S在每个节点上运行的网络代理，service资源的载体
+	> 建立了pod网络和集群网络的关系
+	> 常用三种流量调度模式，Userspace(废弃)，Iptables(濒临废弃)，Ipvs（推荐）
+	> 负责建立和删除包括更新调度规则，通知apiserver自己的更新，或者从apiserver获取其他kube-proxy的调度规则变化来更新自己的
+
+![enter description here](https://raw.githubusercontent.com/LazystudentCH/blogImage/master/2020/9/8/[Kubernetes]1.快速入门/1599577553379.png)
+
+**K8S逻辑架构图**
+
+![enter description here](https://raw.githubusercontent.com/LazystudentCH/blogImage/master/2020/9/8/[Kubernetes]1.快速入门/1599577579512.png)
